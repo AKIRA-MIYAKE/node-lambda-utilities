@@ -20,7 +20,7 @@ The list below is part of the type definition provided by `@types/aws-lambda`.
 + CloudFormation Custom Resource event and response
 + Context
 
-`lambda-utilities` provides DynamoDBStreams event type definition that B does not provide.  
+`lambda-utilities` provides DynamoDBStreams event type definition that `@types/aws-lambda` does not provide.  
 In addition, `lambda-utilities` provides a generic interface for its own event handler.
 
 ```
