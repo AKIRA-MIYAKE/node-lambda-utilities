@@ -26,7 +26,7 @@ export const generateDummyContext: () => Context = () => ({
   succeed: (arg0: any, arg1?: any) => {}
 })
 
-export const generateMockContext: (paras?: GenerateMockContext.Params) => MockContext
+export const generateMockContext: (params?: GenerateMockContext.Params) => MockContext
 = (params = {}) => {
   const context = Object.assign({}, generateDummyContext(), params) as Context
 
