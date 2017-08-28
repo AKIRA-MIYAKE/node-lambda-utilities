@@ -1,6 +1,6 @@
 {
   "name": "lambda-utilities",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utility functions and type definitions for AWS Lambda",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

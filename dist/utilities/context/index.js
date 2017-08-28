@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var sinon = require("sinon");
+var sinon_1 = require("sinon");
 exports.generateDummyContext = function () { return ({
     callbackWaitsForEmptyEventLoop: false,
     functionName: 'functionName',
@@ -20,6 +20,11 @@ exports.generateDummyContext = function () { return ({
 exports.generateMockContext = function (params) {
     if (params === void 0) { params = {}; }
     var context = Object.assign({}, exports.generateDummyContext(), params);
-    var expectations = sinon.mock(context);
-    return { expectations: expectations, context: context };
+    var done = sinon_1.expectation.create('done');
+    done.callsFake(context.done);
+    var fail = sinon_1.expectation.create('fail');
+    fail.callsFake(context.fail);
+    var succeed = sinon_1.expectation.create('succeed');
+    succeed.callsFake(context.succeed);
+    return Object.assign(context, { done: done, fail: fail, succeed: succeed });
 };

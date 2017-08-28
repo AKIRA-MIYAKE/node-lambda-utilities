@@ -1,11 +1,13 @@
 /// <reference types="sinon" />
 import { Context, CognitoIdentity } from 'aws-lambda';
-import * as sinon from 'sinon';
+import { SinonExpectation } from 'sinon';
+export interface MockContext extends Context {
+    done: SinonExpectation;
+    fail: SinonExpectation;
+    succeed: SinonExpectation;
+}
 export declare const generateDummyContext: () => Context;
-export declare const generateMockContext: (paras?: GenerateMockContext.Params) => {
-    expectations: sinon.SinonMock;
-    context: Context;
-};
+export declare const generateMockContext: (params?: GenerateMockContext.Params) => MockContext;
 export declare namespace GenerateMockContext {
     interface Params {
         callbackWaitsForEmptyEventLoop?: boolean;
@@ -18,5 +20,8 @@ export declare namespace GenerateMockContext {
         logStreamName?: string;
         identity?: CognitoIdentity;
         getRemainingTimeInMillis?: () => number;
+        done?: (error: any, result: any) => void;
+        fail?: (arg0: any) => void;
+        succeed?: (arg0: any, arg1?: any) => void;
     }
 }
