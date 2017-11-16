@@ -6,7 +6,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "mocha --compilers ts:espower-typescript/guess \"test/**/*.ts\""
+    "test": "jest --config ./jestconfig.json --coverage"
   },
   "repository": {
     "type": "git",
