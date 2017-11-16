@@ -1,12 +1,12 @@
 {
   "name": "lambda-utilities",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Utility functions and type definitions for AWS Lambda",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "mocha --compilers ts:espower-typescript/guess \"test/**/*.ts\""
+    "test": "jest --config ./jestconfig.json --coverage"
   },
   "repository": {
     "type": "git",
@@ -20,17 +20,15 @@
   },
   "homepage": "https://github.com/AKIRA-MIYAKE/node-lambda-utilities#readme",
   "devDependencies": {
-    "@types/mocha": "^2.2.41",
-    "@types/power-assert": "^1.4.29",
-    "espower-typescript": "^8.1.0",
-    "mocha": "^3.5.0",
-    "power-assert": "^1.4.4",
-    "typescript": "^2.4.2"
+    "@types/jest": "^21.1.6",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.2.2",
+    "typescript": "^2.6.1"
   },
   "dependencies": {
-    "@types/aws-lambda": "0.0.16",
+    "@types/aws-lambda": "0.0.21",
     "@types/sinon": "^2.3.3",
-    "aws-sdk": "^2.100.0",
+    "aws-sdk": "^2.151.0",
     "sinon": "^3.2.1"
   }
 }
