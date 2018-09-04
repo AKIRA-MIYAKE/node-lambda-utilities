@@ -1,4 +1,3 @@
-/// <reference types="sinon" />
 import { Context, CognitoIdentity } from 'aws-lambda';
 import { SinonExpectation } from 'sinon';
 export interface MockContext extends Context {

@@ -1,4 +1,3 @@
-/// <reference types="sinon" />
 import { Callback } from 'aws-lambda';
 import { SinonExpectation } from 'sinon';
 export interface MockCallback extends Callback, SinonExpectation {
