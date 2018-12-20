@@ -1,6 +1,6 @@
 {
   "name": "lambda-utilities",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utility functions and type definitions for AWS Lambda",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,15 +20,16 @@
   },
   "homepage": "https://github.com/AKIRA-MIYAKE/node-lambda-utilities#readme",
   "devDependencies": {
-    "@types/jest": "^23.3.1",
-    "jest": "^23.5.0",
-    "ts-jest": "^23.1.4",
-    "typescript": "^3.0.3"
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.18",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
   },
   "dependencies": {
-    "@types/aws-lambda": "^8.10.11",
-    "@types/sinon": "^5.0.2",
-    "aws-sdk": "^2.307.0",
-    "sinon": "^6.1.5"
+    "@types/aws-lambda": "^8.10.16",
+    "@types/sinon": "^7.0.2",
+    "aws-sdk": "^2.380.0",
+    "sinon": "^7.2.2"
   }
 }
