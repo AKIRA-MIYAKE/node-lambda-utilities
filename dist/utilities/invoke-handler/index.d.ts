@@ -7,3 +7,4 @@ export declare namespace InvokeHandler {
         callback?: Callback;
     }
 }
+//# sourceMappingURL=index.d.ts.map

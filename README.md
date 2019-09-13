@@ -8,40 +8,20 @@ $ npm isntall lambda-utilities
 ```
 
 ## Usage
-### Types
-`lambda-utilities` contains `@types/aws-lambda` which provides the basic type of lambda.  
-The list below is part of the type definition provided by `@types/aws-lambda`.  
-
-+ API Gateway event and response
-+ API Gateway CustomAuthorizer event and response
-+ SNS event
-+ S3 Create event
-+ Cognito User Pool event
-+ CloudFormation Custom Resource event and response
-+ Context
-
-`lambda-utilities` provides DynamoDBStreams event type definition that `@types/aws-lambda` does not provide.  
-In addition, `lambda-utilities` provides a generic interface for its own event handler.
-
-```
-interface Handler<Event, Callback> extends Function {
-  (event: Event, context: Context, callback: Callback): void
-}
-```
 
 ### Utilities
 #### Callback
-Provide mock `Callback` that implementing interface of `SinonExpectation`.  
-The argument `callback` is executed on `callsFake`.  
+Provide mock `Callback` that implementing interface of `SinonExpectation`.
+The argument `callback` is executed on `callsFake`.
 
 ```
 generateMockCallback: (callback?: Callback) => MockCallback
 ```
 
 #### Context
-Provide mock `Context`.  
-`done`, `fail` and `succeed` are implementing interface of `SinonExpectation`.  
-If you set a function with parameters, it will be executed on `callsFake`.  
+Provide mock `Context`.
+`done`, `fail` and `succeed` are implementing interface of `SinonExpectation`.
+If you set a function with parameters, it will be executed on `callsFake`.
 
 ```
 generateMockContext: (params?: GenerateMockContext.Params) => MockContext
@@ -68,8 +48,8 @@ export namespace GenerateMockContext {
 ```
 
 #### InvokeHandler
-It is a function that executes the handler of lambda.  
-It can be used in tests in combination with mock.  
+It is a function that executes the handler of lambda.
+It can be used in tests in combination with mock.
 
 ```
 const handler: Handler<TestEvet, TestCallback> = (event, context, callback) => {

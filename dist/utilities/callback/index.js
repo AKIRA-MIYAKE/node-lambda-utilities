@@ -7,3 +7,4 @@ exports.generateMockCallback = function (callback) {
     mockCallback.callsFake(callback);
     return mockCallback;
 };
+//# sourceMappingURL=index.js.map

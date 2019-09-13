@@ -7,3 +7,4 @@ exports.invokeHandler = function (handler, params) {
     var callback = (typeof params.callback !== 'undefined') ? params.callback : function () { };
     handler(event, context, callback);
 };
+//# sourceMappingURL=index.js.map

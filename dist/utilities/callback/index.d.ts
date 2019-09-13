@@ -3,3 +3,4 @@ import { SinonExpectation } from 'sinon';
 export interface MockCallback extends Callback, SinonExpectation {
 }
 export declare const generateMockCallback: (callback?: Callback) => MockCallback;
+//# sourceMappingURL=index.d.ts.map

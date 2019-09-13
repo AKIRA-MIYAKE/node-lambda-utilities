@@ -28,3 +28,4 @@ exports.generateMockContext = function (params) {
     succeed.callsFake(context.succeed);
     return Object.assign(context, { done: done, fail: fail, succeed: succeed });
 };
+//# sourceMappingURL=index.js.map

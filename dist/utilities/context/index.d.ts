@@ -24,3 +24,4 @@ export declare namespace GenerateMockContext {
         succeed?: (arg0: any, arg1?: any) => void;
     }
 }
+//# sourceMappingURL=index.d.ts.map

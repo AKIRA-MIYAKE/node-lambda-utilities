@@ -1,4 +1,4 @@
-import { Handler } from '../../../src/types'
+import { Handler } from 'aws-lambda'
 
 import { invokeHandler } from '../../../src/utilities/invoke-handler'
 import { generateMockContext } from '../../../src/utilities/context'
@@ -9,12 +9,10 @@ describe('utilities/invoke-handler', () => {
   describe('invokeHandler()', () => {
 
     interface TestEvent { foo: number }
-    interface TestCallback {
-      (error?: Error, result?: TestEvent): void
-    }
+    type TestResult = TestEvent
 
     it('invoke passed callback.', () => {
-      const handler: Handler<TestEvent, TestCallback> = (event, context, callback) => {
+      const handler: Handler<TestEvent, TestResult> = (event, context, callback) => {
         callback(undefined, { foo: event.foo * 2 })
       }
 
@@ -29,7 +27,7 @@ describe('utilities/invoke-handler', () => {
 
     it('invoke passed calback in async handler.', () => {
       return new Promise((resolve, reject) => {
-        const handler: Handler<TestEvent, TestCallback> = (event, context, callback) => {
+        const handler: Handler<TestEvent, TestResult> = (event, context, callback) => {
           setTimeout(() => {
             callback(undefined, { foo: event.foo * 2})
           }, 100)
@@ -55,7 +53,7 @@ describe('utilities/invoke-handler', () => {
 
     it('invoke passed context in async handler.', () => {
       return new Promise((resolve, reject) => {
-        const handler: Handler<TestEvent, TestCallback> = (event, context, callback) => {
+        const handler: Handler<TestEvent, TestResult> = (event, context, callback) => {
           setTimeout(() => {
             context.done(undefined, { foo: event.foo * 2 })
           }, 100)

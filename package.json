@@ -1,12 +1,12 @@
 {
   "name": "lambda-utilities",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Utility functions and type definitions for AWS Lambda",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest --config ./jestconfig.json --coverage"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -14,22 +14,21 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AKIRA-MIYAKE/node-lambda-utilities/issues"
   },
   "homepage": "https://github.com/AKIRA-MIYAKE/node-lambda-utilities#readme",
-  "devDependencies": {
-    "@types/jest": "^23.3.10",
-    "@types/node": "^10.12.18",
-    "jest": "^23.6.0",
-    "ts-jest": "^23.10.5",
-    "typescript": "^3.2.2"
-  },
   "dependencies": {
-    "@types/aws-lambda": "^8.10.16",
-    "@types/sinon": "^7.0.2",
-    "aws-sdk": "^2.380.0",
-    "sinon": "^7.2.2"
+    "@types/aws-lambda": "^8.10.31",
+    "@types/sinon": "^7.0.13",
+    "aws-sdk": "^2.528.0",
+    "sinon": "^7.4.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
   }
 }
